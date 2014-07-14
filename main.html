@@ -1,0 +1,58 @@
+<!--Main page for the html of the application Simpsons Visualization-->
+<!--authors: Alberto Gonzalez, Hao Xu date:April 2014-->
+<!doctype html>
+<html>
+<head>
+    <title>Simpsons Visualization</title>
+    <!--External Libraries js -->
+    <script src="lib/jquery/jquery-1.11.0.min.js"></script>
+    <script src="lib/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="lib/taffy/taffy.js"></script>
+    <!--Internal js files-->
+    <script src="data/episodes.js"></script>
+    <script src="data/episodes_info.js"></script>
+    <script src="data/characters.js"></script>
+    <script src="data/characters_info.js"></script>
+    <script src="data/locations.js"></script>
+    <!-- importing database -->
+    <script>
+
+    var episodes_DB = TAFFY(episodes); //Episodes from Andy
+    var episodes_info_DB = TAFFY(episodes_info); //Episodes with image from us
+    var characters_DB = TAFFY(characters);    // Characters from Andy
+    var characters_info_DB = TAFFY(characters_info); // characters with image from us
+    var locations_DB = TAFFY(locations);  //locations from Andy
+ 
+    </script>
+    <!--Stylesheets-->
+    <link href="lib/bootstrap-3.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+        	<img id="logo" src="simpsons_logo2.jpg" alt="The Simpsons"></img>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Simpsons App</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="main.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    <div id="home"></div>
+   	<script src="js/code.js"></script>
+</body>
+</html>
